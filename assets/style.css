@@ -1,0 +1,37 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    animation: move 4s infinite;
+}
+@keyframes move {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 95%;
+    }
+    50% {
+        top: 95%;
+        left: 95%;
+    }
+    75% {
+        top: 89%;
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
