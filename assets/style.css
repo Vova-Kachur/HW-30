@@ -1,37 +1,42 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+    width: 500px;
+    height: 500px;
+    position: relative;
 }
+
 .square {
-    width: 100px;
-    height: 100px;
-    background-color: red;
+    width: 150px;
+    height: 150px;
+    animation-name: move_container-box;
+    animation-duration: 4500ms;
+    animation-iteration-count: infinite;
     position: absolute;
-    animation: move 4s infinite;
+    top: 0;
+    left: 12px;
 }
-@keyframes move {
+
+@keyframes move_container-box {
     0% {
-        top: 0;
-        left: 0;
+        background-color: orange;
     }
+    
     25% {
-        top: 0;
-        left: 95%;
+        background-color: pink;
+        transform: translate(0,600px);
     }
+
     50% {
-        top: 95%;
-        left: 95%;
+        background-color: blueviolet;
+        transform: translate(600px,600px);
     }
+
     75% {
-        top: 89%;
-        left: 0;
+        background-color: brown;
+        transform: translate(600px,0);
     }
+
     100% {
-        top: 0;
-        left: 0;
+        background-color: blue;
+        transform: translate(0,0);
     }
 }
